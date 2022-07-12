@@ -1,0 +1,102 @@
+
+<%= form_with(model: dado) do |form| %>
+  <% if dado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dado.errors.count, "error") %> Dados não puderam ser salvos:</h2>
+
+      <ul>
+        <% dado.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div>
+  <div class="fieldset">
+    <%= form.label :razão %>
+    <%= form.text_field :razao %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :nomeFantasia %>
+    <%= form.text_field :nomef %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :cnpj %>
+    <%= form.text_field :cnpj %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :ponto %>
+    <%= form.text_field :ponto %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :numero %>
+    <%= form.text_field :numero %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :complemento %>
+    <%= form.text_field :complemento %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :cep %>
+    <%= form.text_field :cep %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :bairro %>
+    <%= form.text_field :bairro %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :cidade %>
+    <%= form.text_field :cidade %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :estado %>
+    <%= form.text_field :estado %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :fone1 %>
+    <%= form.text_field :fone1 %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :fone2 %>
+    <%= form.text_field :fone2 %>
+  </div>
+
+
+
+  <div class="fieldset">
+    <%= form.label :homepage %>
+    <%= form.text_field :homepage %>
+  </div>
+
+  <div class="fieldset">
+    <%= form.label :observacoes %>
+    <%= form.text_field :observacoes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  
+</div>
+<% end %>

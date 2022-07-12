@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>RAZÃO SOCIAL:</strong>
+  <%= @dado.razao %>
+</p>
+
+<p>
+  <strong>NOME FANTASIA:</strong>
+  <%= @dado.nomef %>
+</p>
+
+<p>
+  <strong>CNPJ:</strong>
+  <%= @dado.cnpj %>
+</p>
+
+<p>
+  <strong>PONTO FOCAL:</strong>
+  <%= @dado.ponto %>
+</p>
+
+<p>
+  <strong>ENDEREÇO:</strong>
+  <%= @dado.endereco %>
+</p>
+
+<p>
+  <strong>NÚMERO:</strong>
+  <%= @dado.numero %>
+</p>
+
+<p>
+  <strong>COMPLEMENTO:</strong>
+  <%= @dado.complemento %>
+</p>
+
+<p>
+  <strong>CEP:</strong>
+  <%= @dado.cep %>
+</p>
+
+<p>
+  <strong>BAIRRO:</strong>
+  <%= @dado.bairro %>
+</p>
+
+<p>
+  <strong>CIDADE:</strong>
+  <%= @dado.cidade %>
+</p>
+
+<p>
+  <strong>ESTADO:</strong>
+  <%= @dado.estado %>
+</p>
+
+<p>
+  <strong>E-MAIL:</strong>
+  <%= @dado.email %>
+</p>
+
+<p>
+  <strong>FONE (1) INSTITUCIONAL:</strong>
+  <%= @dado.fone1 %>
+</p>
+
+<p>
+  <strong>FONE (2):</strong>
+  <%= @dado.fone2 %>
+</p>
+
+
+<p>
+  <strong>HOMEPAGE</strong>
+  <%= @dado.homepage %>
+</p>
+
+<p>
+  <strong>OBSERVAÇÕES:</strong>
+  <%= @dado.observacoes %>
+</p>
+
+<%= link_to 'Edit', edit_dado_path(@dado) %> |
+<%= link_to 'Back', dados_path %>
