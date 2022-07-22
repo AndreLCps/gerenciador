@@ -1,85 +1,428 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>RAZÃO SOCIAL:</strong>
-  <%= @dado.razao %>
-</p>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">DADOS DO CLIENTE E INFORMAÇÕES GERAIS</th>
+      </tr>
+    </thead>
+    <tbody>
 
-<p>
-  <strong>NOME FANTASIA:</strong>
-  <%= @dado.nomef %>
-</p>
+      <tr>
+        <th scope="row">NOME RAZÃO</th>
+        <td><%= "#{@dado.razao}" %></td>
+      </tr>
 
-<p>
-  <strong>CNPJ:</strong>
-  <%= @dado.cnpj %>
-</p>
+      <tr>
+        <th scope="row">NOME FANTASIA</th>
+        <td><%= "#{@dado.nomef}" %></td>
+      </tr>
 
-<p>
-  <strong>PONTO FOCAL:</strong>
-  <%= @dado.ponto %>
-</p>
+      <tr>
+        <th scope="row">CNPJ</th>
+        <td><%= "#{@dado.cnpj}" %></td>
+      </tr>
 
-<p>
-  <strong>ENDEREÇO:</strong>
-  <%= @dado.endereco %>
-</p>
+      <tr>
+        <th scope="row">PONTO FOCAL</th>
+        <td><%= "#{@dado.ponto}" %></td>
+      </tr>
 
-<p>
-  <strong>NÚMERO:</strong>
-  <%= @dado.numero %>
-</p>
+      <tr>
+        <th scope="row">ENDEREÇO</th>
+        <td><%= "#{@dado.endereco}" %></td>
+      </tr>
 
-<p>
-  <strong>COMPLEMENTO:</strong>
-  <%= @dado.complemento %>
-</p>
+      <tr>
+        <th scope="row">NÚMERO</th>
+        <td><%= "#{@dado.numero}" %></td>
+      </tr>
 
-<p>
-  <strong>CEP:</strong>
-  <%= @dado.cep %>
-</p>
+      <tr>
+        <th scope="row">COMPLEMENTO</th>
+        <td><%= "#{@dado.complemento}" %></td>
+      </tr>
 
-<p>
-  <strong>BAIRRO:</strong>
-  <%= @dado.bairro %>
-</p>
+      <tr>
+        <th scope="row">CEP</th>
+        <td><%= "#{@dado.cep}" %></td>
+      </tr>
 
-<p>
-  <strong>CIDADE:</strong>
-  <%= @dado.cidade %>
-</p>
+      <tr>
+        <th scope="row">BAIRRO</th>
+        <td><%= "#{@dado.bairro}" %></td>
+      </tr>
 
-<p>
-  <strong>ESTADO:</strong>
-  <%= @dado.estado %>
-</p>
+      <tr>
+        <th scope="row">CIDADE</th>
+        <td><%= "#{@dado.cidade}" %></td>
+      </tr>
 
-<p>
-  <strong>E-MAIL:</strong>
-  <%= @dado.email %>
-</p>
+      <tr>
+        <th scope="row">ESTADO</th>
+        <td><%= "#{@dado.estado}" %></td>
+      </tr>
 
-<p>
-  <strong>FONE (1) INSTITUCIONAL:</strong>
-  <%= @dado.fone1 %>
-</p>
+      <tr>
+        <th scope="row">E-MAIL</th>
+        <td><%= "#{@dado.email}" %></td>
+      </tr>
 
-<p>
-  <strong>FONE (2):</strong>
-  <%= @dado.fone2 %>
-</p>
+      <tr>
+        <th scope="row">FONE (1)</th>
+        <td><%= "#{@dado.fone1}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">FONE (2)</th>
+        <td><%= "#{@dado.fone2}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">HOMEPAGE</th>
+        <td><%= "#{@dado.homepage}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">OBSERVAÇÕES</th>
+        <td><%= "#{@dado.observacoes}" %></td>
+      </tr>
+    </tbody>
+
+<br>
+
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">DADOS DO SÓCIO PRINCIPAL</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">NOME COMPLETO</th>
+        <td><%= "#{@dado.nome_completo}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">CPF</th>
+        <td><%= "#{@dado.cpf}" %></td>
+      </tr>
+      
+      <tr>
+        <th scope="row">DATA DE NASCIMENTO</th>
+        <td><%= "#{@dado.data_de_nascimento}" %></td>
+      </tr>
+    </tbody>
+
+<br>
 
 
-<p>
-  <strong>HOMEPAGE</strong>
-  <%= @dado.homepage %>
-</p>
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">DADOS DO CLIENTE E INFORMAÇÕES GERAIS</th>
+      </tr>
+    </thead>
+    <tbody>
 
-<p>
-  <strong>OBSERVAÇÕES:</strong>
-  <%= @dado.observacoes %>
-</p>
+      <tr>
+        <th scope="row">PAYMENT AGENCY</th>
+        <td><%= "#{@dado.payment_agency}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">OFFICE HOURS</th>
+        <td><%= "#{@dado.office_hours}" %></td>
+      </tr>
+      
+      <tr>
+        <th scope="row">AGENCY NUMBER</th>
+        <td><%= "#{@dado.agency_number}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">AGENCY FULL NAME</th>
+        <td><%= "#{@dado.agency_full_name}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">CHECKING ACCOUNT LABEL</th>
+        <td><%= "#{@dado.checking_accont_label}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">SESSIONS NEW PHONE NUMBER</th>
+        <td><%= "#{@dado.sessions_new_fone_number}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">BANK CODE</th>
+        <td><%= "#{@dado.bank_code}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">AGENCY SHORT NAME</th>
+        <td><%= "#{@dado.agency_short_name}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">TITLE NAME</th>
+        <td><%= "#{@dado.title_name}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">URL AJUDA</th>
+        <td><%= "#{@dado.url_ajuda}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">CONTA HEADER</th>
+        <td><%= "#{@dado.conta_header}" %></td>
+      </tr>
+
+    </tbody>
+
+
+
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">DADOS DPO CLIENTE</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">NOME DPO</th>
+        <td><%= "#{@dado.nome_dpo}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">E-MAIL DPO</th>
+        <td><%= "#{@dado.email_dpo}" %></td>
+      </tr>
+      
+      <tr>
+        <th scope="row">FONE DPO</th>
+        <td><%= "#{@dado.fone_dpo}" %></td>
+      </tr>
+    </tbody>
+
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">IDENTIDADE VISUAL</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">ENDEREÇO DA PASTA COM ARQUIVOS</th>
+        <td><%= "#{@dado.endereco_pasta_arquivos}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">APLICATIVO</th>
+        <td><%= "#{@dado.aplicativo}" %></td>
+      </tr>
+      
+      <tr>
+        <th scope="row">GERENCIAL</th>
+        <td><%= "#{@dado.gerencial}" %></td>
+      </tr>
+      <tr>
+        <th scope="row">INTERNET BANKING</th>
+        <td><%= "#{@dado.internet_banking}" %></td>
+      </tr>
+
+    </tbody>
+
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">BILBIOTECAS</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">CLIENTE POSSUI CONTA NAS LOJAS DE APLICATIVOS ANDROID E IOS</th>
+        <td><%= "#{@dado.lojas_apps_android_ios}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">CLIENTE ADICIONOU E-MAILS DE DESENVOLVEDORES CASHWAY</th>
+        <td><%= "#{@dado.email_devs_cashway}" %></td>
+      </tr>
+
+    </tbody>
+        <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">TEMPLATES DE E-MAILS (SENDGRID)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">EMAIL VALIDATE</th>
+        <td><%= "#{@dado.email_validate}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">ACCOUNT REPROVAL</th>
+        <td><%= "#{@dado.accont_reproval}" %></td>
+      </tr>
+      
+      <tr>
+        <th scope="row">CREATE ACCOUNT</th>
+        <td><%= "#{@dado.create_accont}" %></td>
+      </tr>
+      <tr>
+        <th scope="row">RESET PASSWORD</th>
+        <td><%= "#{@dado.reset_password}" %></td>
+      </tr>
+
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">TEMPLATES MOBILE (ONESIGNAL)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">PIX_DEVOLUTION_RECIVED</th>
+        <td><%= "#{@dado.pix_devolution_recived}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">PIX_RECIVED</th>
+        <td><%= "#{@dado.pix_recived}" %></td>
+      </tr>
+      
+      <tr>
+        <th scope="row">SCHEDULE_PAYMENT_ROLLBACK_INSUFICIENT_FUNDS</th>
+        <td><%= "#{@dado.insuficient_funds}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">SECHEDULED_PIX_DEVOLUTION_SENT</th>
+        <td><%= "#{@dado.pix_devolution_send}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">SCHEDULED_PIX_SENT</th>
+        <td><%= "#{@dado.pix_sent}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">SLIP_PAID</th>
+        <td><%= "#{@dado.slip_paid}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">TED_PAYMENT_CONFIRMED</th>
+        <td><%= "#{@dado.ted_payment_confirmed}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">TED_RECIVED</th>
+        <td><%= "#{@dado.ted_recived}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">TED_ROLLBACK</th>
+        <td><%= "#{@dado.ted_rollback}" %></td>
+      </tr>
+    </tbody>
+
+
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">APONTAMENTO DE DNS</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">DNS_IB</th>
+        <td><%= "#{@dado.dns_ib}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">DNS_GERENCIAL</th>
+        <td><%= "#{@dado.dns_gerencial}" %></td>
+      </tr>
+    </tbody>
+
+
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">CHAVES INSTITUIÇÃO FINANCEIRA</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">CLIENTE ID</th>
+        <td><%= "#{@dado.cliente_id}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">SECRET ID</th>
+        <td><%= "#{@dado.secret_id}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">SECRET ID: 3º TOKEN </th>
+        <td><%= "#{@dado.secret_id_3rdtoken}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">CHAVE PIX</th>
+        <td><%= "#{@dado.pix_key}" %></td>
+      </tr>
+
+    </tbody>
+
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">CONECTIVIDADE</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">PLANO 1: LICENÇA DE ÁREA DE TRABALHO REMOTO + IP FIXO</th>
+        <td><%= "#{@dado.remoto_ip_fixo}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">PLANO 2: LICENÇA DE ÁREA DE TRABALHO REMOTO + VPN</th>
+        <td><%= "#{@dado.remoto_vpn}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">PLANO 3: LICENÇA RXP + IP FIXO</th>
+        <td><%= "#{@dado.rxp_ip_fixo}" %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">PLANO 4: LICENÇA RXP + VPN - (RECOMENDADO)</th>
+        <td><%= "#{@dado.rxp_vpn}" %></td>
+      </tr>
+
+    </tbody>
+
+    <thead>
+      <tr>
+        <th class="table-dark"colspan="2" scope="col">CONECTIVIDADE</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">OBSERVAÇÕES GERAIS DO LEAD</th>
+        <td><%= "#{@dado.observacoes_lead}" %></td>
+      </tr>
+
+</table>
 
 <%= link_to 'Edit', edit_dado_path(@dado) %> |
 <%= link_to 'Back', dados_path %>
+<%= link_to "Export", dado_path(format: 'csv') %>

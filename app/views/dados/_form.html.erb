@@ -1,5 +1,6 @@
 
 <%= form_with(model: dado) do |form| %>
+
   <% if dado.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(dado.errors.count, "error") %> Dados não puderam ser salvos:</h2>
@@ -11,92 +12,390 @@
       </ul>
     </div>
   <% end %>
-<div>
-  <div class="field">
-    <%= form.label :razão %>
-    <%= form.text_field :razao %>
-  </div>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nomef %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cnpj %>
-    <%= form.text_field :cnpj %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ponto %>
-    <%= form.text_field :ponto %>
-  </div>
-
-  <div class="field">
-    <%= form.label :endereço %>
-    <%= form.text_field :endereco %>
-  </div>
-
-  <div class="field">
-    <%= form.label :número %>
-    <%= form.text_field :numero %>
-  </div>
-
-  <div class="field">
-    <%= form.label :complemento %>
-    <%= form.text_field :complemento %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cep %>
-    <%= form.text_field :cep %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bairro %>
-    <%= form.text_field :bairro %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cidade %>
-    <%= form.text_field :cidade %>
-  </div>
-
-  <div class="field">
-    <%= form.label :estado %>
-    <%= form.text_field :estado %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fone1 %>
-    <%= form.text_field :fone1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fone2 %>
-    <%= form.text_field :fone2 %>
-  </div>
-
-
-
-  <div class="field">
-    <%= form.label :homepage %>
-    <%= form.text_field :homepage %>
-  </div>
-
-  <div class="field">
-    <%= form.label :observações %>
-    <%= form.text_field :observacoes %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+<div class="row g-3">
+  <div class="col-sm-12"> 
+    <h3>DADOS DO CLIENTE E INFORMAÇÕES GERAIS</h3>
   </div>
   
+  <div class="col-sm-4">
+    <%= form.label "razão", class:"form-label" %>
+    <%= form.text_field :razao, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "Nome Fantasia", class:"form-label" %>
+    <%= form.text_field :nomef, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "CNPJ", class:"form-label" %>
+    <%= form.text_field :cnpj, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "PONTO FOCAL" , class:"form-label" %>
+    <%= form.text_field :ponto, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "ENDEREçO" , class:"form-label" %>
+    <%= form.text_field :endereco, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "número" , class:"form-label" %>
+    <%= form.text_field :numero, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "COMPLEMENTO" , class:"form-label" %>
+    <%= form.text_field :complemento, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "CEP" , class:"form-label" %>
+    <%= form.text_field :cep, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "BAIRRO" , class:"form-label" %>
+    <%= form.text_field :bairro, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "CIDADE" , class:"form-label" %>
+    <%= form.text_field :cidade, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "ESTADO" , class:"form-label" %>
+    <%= form.text_field :estado, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "E-MAIL" , class:"form-label" %>
+    <%= form.text_field :email, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "FONE (1) INSTITUCIONAL" , class:"form-label" %>
+    <%= form.text_field :fone1, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "FONE (2)" , class:"form-label" %>
+    <%= form.text_field :fone2, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "HOMEPAGE" , class:"form-label" %>
+    <%= form.text_field :homepage, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-12">
+    <%= form.label "observações", class:"form-label" %>
+    <%= form.text_field :observacoes, class:"form-control" %>
+  </div>
+</div>
+
+<br>
+
+<div class="row g-3">
+  <div class="col-sm-12"> 
+      <h3>DADOS DO SÓCIO PRINCIPAL</h3>
+  </div>
+  <div class="col-sm-4">
+    <%= form.label "NOME COMPLETO", class:"form-label" %>
+    <%= form.text_field :nome_completo, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "CPF", class:"form-label" %>
+    <%= form.text_field :cpf, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "DATA DE NASCIMENTO", class:"form-label" %>
+    <%= form.text_field :data_de_nascimento, class:"form-control" %>
+  </div>
+</div>
+<br>
+
+
+<div class="row g-3">
+  <div class="col-sm-12"> 
+      <h3>DADOS DO CLIENTE E INFORMAÇÕES</h3>
+  </div>
+  <div class="col-sm-4">
+    <%= form.label "PAYMENT_AGENCY", class:"form-label" %>
+    <%= form.text_field :payment_agency, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "OFFICE_HOURS", class:"form-label" %>
+    <%= form.text_field :office_hours, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "AGENCY_NUMBER", class:"form-label" %>
+    <%= form.text_field :agency_number, class:"form-control" %>
+  </div>
+  <div class="col-sm-4">
+    <%= form.label "AGENCY_FULL_NAME", class:"form-label" %>
+    <%= form.text_field :agency_full_name, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "CHECKING_ACCONT_LABEL", class:"form-label" %>
+    <%= form.text_field :checking_accont_label, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "SESSIONS_NEW_PHONE_NUMBER", class:"form-label" %>
+    <%= form.text_field :sessions_new_fone_number, class:"form-control" %>
+  </div>
+  <div class="col-sm-4">
+    <%= form.label "BANK_CODE", class:"form-label" %>
+    <%= form.text_field :bank_code, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "AGENCY_SHORT_NAME", class:"form-label" %>
+    <%= form.text_field :agency_short_name, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "TITLE_NAME", class:"form-label" %>
+    <%= form.text_field :title_name, class:"form-control" %>
+  </div>
+  <div class="col-sm-6">
+    <%= form.label "URL_AJUDA", class:"form-label" %>
+    <%= form.text_field :url_ajuda, class:"form-control" %>
+  </div>
+    <div class="col-sm-6">
+      <%= form.label "CONTA_HEADER", class:"form-label" %>
+      <%= form.text_field :conta_header, class:"form-control" %>
+  </div>
+</div>
+<br>
+
+<div class="row g-3">  
+  <div class="col-sm-12"> 
+      <h3>DADOS DPO CLIENTE</h3>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "NOME_DPO", class:"form-label" %>
+    <%= form.text_field :nome_dpo, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "EMAIL_DPO", class:"form-label" %>
+    <%= form.text_field :email_dpo, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "FONE_DPO", class:"form-label" %>
+    <%= form.text_field :fone_dpo, class:"form-control" %>
+  </div>
+</div>
+<br>
+
+<div class="row g-3">  
+  <div class="col-sm-12"> 
+      <h3>IDENTIDADE VISUAL</h3>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "ENDEREçO_DA_PASTA_COM_ARQUIVOS", class:"form-label" %>
+    <%= form.text_field :endereco_pasta_arquivos, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "APLICATIVO", class:"form-label" %>
+    <%= form.text_field :aplicativo, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "GERENCIAL", class:"form-label" %>
+    <%= form.text_field :gerencial, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "INTERNET_BANKING", class:"form-label" %>
+    <%= form.text_field :internet_banking, class:"form-control" %>
+  </div>
+</div>
+<br>
+
+<div class="row g-3">  
+  <div class="col-sm-12"> 
+      <h3>BILBIOTECAS</h3>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "cliente possui conta nas lojas de aplicativos android e ios?", class:"form-label" %>
+    <%= form.text_field :lojas_apps_android_ios, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "cliente adicionou e-mails de desenvolvedores cashway", class:"form-label" %>
+    <%= form.text_field :email_devs_cashway, class:"form-control" %>
+  </div>
+</div>
+<br>
+
+<div class="row g-3">  
+  <div class="col-sm-12"> 
+      <h3>TEMPLATES DE EMAILS (SENDGRID)</h3>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "EMAIL VALIDATE", class:"form-label" %>
+    <%= form.text_field :email_validate, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "ACCOUNT REPROVAL", class:"form-label" %>
+    <%= form.text_field :accont_reproval, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "CREATE ACCOUNT", class:"form-label" %>
+    <%= form.text_field :create_accont, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "RESET PASSWORD", class:"form-label" %>
+    <%= form.text_field :reset_password, class:"form-control" %>
+  </div>
+</div>
+<br>
+
+<div class="row g-3">
+  <div class="col-sm-12"> 
+      <h3>TEMPLATES MOBILE (ONESIGNAL)</h3>
+  </div>
+  <div class="col-sm-4">
+    <%= form.label "PIX DEVOLUTION RECIVED", class:"form-label" %>
+    <%= form.text_field :pix_devolution_recived, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "PIX RECIVED", class:"form-label" %>
+    <%= form.text_field :pix_recived, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "SCHEDULE PAYMENT ROLLBACK INSUFICIENT FUNDS", class:"form-label" %>
+    <%= form.text_field :insuficient_funds, class:"form-control" %>
+  </div>
+  <div class="col-sm-4">
+    <%= form.label "SCHEDULED PIX DEVOLUTION SENT", class:"form-label" %>
+    <%= form.text_field :pix_devolution_send, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "SCHEDULED PIX SENT", class:"form-label" %>
+    <%= form.text_field :pix_sent, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "SLIP PAID", class:"form-label" %>
+    <%= form.text_field :slip_paid, class:"form-control" %>
+  </div>
+  <div class="col-sm-4">
+    <%= form.label "TED PAYMENT CONFIRMED", class:"form-label" %>
+    <%= form.text_field :ted_payment_confirmed, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "TED RECIVED", class:"form-label" %>
+    <%= form.text_field :ted_recived, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= form.label "TED ROLLBACK", class:"form-label" %>
+    <%= form.text_field :ted_rollback, class:"form-control" %>
+  </div>
+</div>
+<br>
+
+<div class="row g-3">
+  <div class="col-sm-12"> 
+      <h3>APONTAMENTOS DE DNS</h3>
+  </div>
+  <div class="col-sm-6">
+    <%= form.label "DNS IB", class:"form-label" %>
+    <%= form.text_field :dns_ib, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "DNS GERENCIAL", class:"form-label" %>
+    <%= form.text_field :dns_gerencial, class:"form-control" %>
+  </div>
+<br>
+
+  <div class="col-sm-12"> 
+      <h3>CHAVES INSTITUIÇÃO FINANCEIRA</h3>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "CLIENTE ID", class:"form-label" %>
+    <%= form.text_field :cliente_id, class:"form-control" %>
+  </div>
+  <div class="col-sm-6">
+    <%= form.label "SECRET ID", class:"form-label" %>
+    <%= form.text_field :secret_id, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "SECRET ID: 3º TOKEN", class:"form-label" %>
+    <%= form.text_field :secret_id_3rdtoken, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "CHAVE PIX", class:"form-label" %>
+    <%= form.text_field :pix_key, class:"form-control" %>
+  </div>
+
+<br>
+  <div class="col-sm-12"> 
+      <h3>CONECTIVIDADE</h3>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "PLANO1: LICENçA DE áREA DE TRABALHO REMOTO + IP FIXO", class:"form-label" %>
+    <%= form.text_field :remoto_ip_fixo, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "PLANO 2: LICENÇA DE ÁREA DE TRABALHO REMOTO + VPN", class:"form-label" %>
+    <%= form.text_field :remoto_vpn, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "PLANO 3: LICENÇA RXP + IP FIXO", class:"form-label" %>
+    <%= form.text_field :rxp_ip_fixo, class:"form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label "PLANO 4: LICENÇA RXP + VPN - (RECOMENDADO)", class:"form-label" %>
+    <%= form.text_field :rxp_vpn, class:"form-control" %>
+  </div>
+
+<br>
+
+  <div class="col-sm-12"> 
+      <h3>OBSERVAÇÕES GERAIS DO LEAD </h3>
+  </div>
+
+  <div class="col-sm-12">
+    <%= form.text_field :observacoes_lead, class:"form-control" %>
+  </div>
+</div>
+<div class="actions">
+    <%= form.submit %>
 </div>
 <% end %>

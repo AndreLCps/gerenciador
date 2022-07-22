@@ -1,92 +1,29 @@
 <p id="notice"><%= notice %></p>
-    <% @dados.each do |dado| %>
-<table class="table table-striped table-borderless">
+
+<table class="table table-striped table-borderless table-hover">
   <thead>
     <tr>
-      <th class="table-dark" colspan="3">DADOS DO CLIENTE E INFORMAÇÕES GERAIS</th>
+      <th class="table-dark" colspan="1">DADOS DO CLIENTE</th>
+      <th class="table-dark" colspan="1">RAZÃO SOCIAL</th>
+      <th class="table-dark" colspan="2">CNPJ</th>
+      
     </tr>
   </thead>
-  <tbody>
-      <tr>
-        <th scope="row">RAZÃO SOCIAL</th>
-        <td><%= dado.razao %></td>
-      </tr>
-      <tr>
-        <th scope="row">NOME FANTASIA</th>
-        <td><%= dado.nomef %></td>
-      </tr>
-      <tr>
-        <th scope="row">CNPJ</th>
-        <td><%= dado.cnpj %></td>
-      </tr>
-      <tr>
-        <th scope="row">PONTO FOCAL</th>
-        <td><%= dado.ponto %></td>
-      </tr>
-      <tr>
-        <th scope="row">ENDEREÇO</th>
-        <td><%= dado.endereco %></td>
-      </tr>
-      <tr>
-        <th scope="row">NÚMERO</th>
-        <td><%= dado.numero %></td>
-      </tr>
-      <tr>
-        <th scope="row">COMPLEMENTO</th>
-        <td><%= dado.complemento %></td>
-      </tr>
-      <tr>
-        <th scope="row">CEP</th>
-        <td><%= dado.cep %></td>
-      </tr>
-      <tr>
-        <th scope="row">BAIRRO</th>
-        <td><%= dado.bairro %></td>
-      </tr>
-      <tr>
-        <th scope="row">CIDADE</th>
-        <td><%= dado.cidade %></td>
-      </tr>
-      <tr>
-        <th scope="row">ESTADO</th>
-        <td><%= dado.estado %></td>
-      </tr>
-      <tr>
-        <th scope="row">E-MAIL</th>
-        <td><%= dado.email %></td>
-      </tr>
-      <tr>
-        <th scope="row">FONE (1) INSTITUCIONAL</th>
-        <td><%= dado.fone1 %></td>
-      </tr>
-      <tr>
-        <th scope="row">FONE (2)</th>
-        <td><%= dado.fone2 %></td>
-      </tr>
-      <tr>
-        <th scope="row">HOMEPAGE</th>
-        <td><%= dado.homepage %></td>
-      </tr>
-      <tr>
-        <th scope="row">OBSERVAÇÕES</th>
-        <td><%= dado.observacoes %></td>
-      </tr>
-<br> 
-      <tr>
-        <td class="btn btn-outline-secondary btn-sm">
-          <%= link_to 'Visualizar', dado %>
-        </td>
-        <td class="btn btn-outline-secondary btn-sm">
-          <%= link_to 'Editar', edit_dado_path(dado) %>
-        </td>
-        <td class="btn btn-outline-secondary btn-sm">
-          <%= link_to 'Apagar', dado, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
+  
+  <% @dados.each do |dado| %>
+    <tbody>
+    <tr>
+      <th scope="row"><%= dado.nomef %></th>
+      <td><%= dado.razao %></td>
+      <td><%= dado.cnpj %></td>
+      <td class="d-flex justify-content-end"><%= link_to 'Visualizar', dado %>...<%= link_to 'Editar', edit_dado_path(dado) %>...<%= link_to 'Apagar', dado, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+    </tr>
+
+  <% end %>
   </tbody>
 </table>
 
 <br>
-<button class= "btn btn-outline-secondary">
-<%= link_to 'Novos dados', new_dado_path %></button>
+
+<%= link_to 'Novos dados', new_dado_path %>
+
