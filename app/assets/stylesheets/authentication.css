@@ -1,5 +1,4 @@
 
-
 body {
   background-color: var(--color-white-bis);
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -7,6 +6,7 @@ body {
 }
 
 main {
+  background-color: #d2dee7c7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,4 +43,38 @@ main {
   color: var(--color-blue);
   font-weight: bold;
   font-size: 14px;
+}
+
+form .field {
+  margin-top: 1rem;
+}
+
+form .field input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #9bb3bc91;
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+form .field input:focus {
+  outline: 0;
+  border: 1px solid rgba(36, 36, 36, 0.29);
+}
+
+form .actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+form .actions input{
+  font-size: 14px;
+  background-color: #9bb3bc91;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  padding: 0.5rem;
 }

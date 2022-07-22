@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Autenticação = Cashwayclients</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag "authentication", media: "all", 'data-turbolinks-track': "reload" %>
+    <%= javascript_pack_tag "authentication", 'data-turbolinks-track': "reload" %>
+  </head>
+
+  <body>
+    <main>
+        <section class="hero">
+          <%= yield %>
+        </section>
+    </main>
+  </body>
+  
+</html>
